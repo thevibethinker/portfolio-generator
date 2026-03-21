@@ -58,11 +58,11 @@ Before the session, make sure you have:
 ## Example Output
 
 Your portfolio will include:
-- **Hero section** with your name, title, and value proposition
-- **About section** with a compelling professional bio
-- **Experience timeline** highlighting your career journey
-- **Skills display** organized by category
-- **Contact section** with links to connect
+- **Editorial-style hero** with large typography and a strong professional framing
+- **About section** with a rewritten, conversational professional bio
+- **Experience section** using clean divider-based entries (no generic cards)
+- **Domains/skills section** with clear signal, not progress bars or badge clutter
+- **Large CTA link** for outreach, plus a minimal footer
 
 Additional sections (projects, certifications, education, publications) appear automatically based on your profile.
 
@@ -70,6 +70,7 @@ Additional sections (projects, certifications, education, publications) appear a
 
 - [Zo Computer](https://www.zo.computer) account
 - LinkedIn profile (public or logged into Zo's browser)
+- A strong model for best results (Claude Opus/Sonnet, GPT-4o+, Gemini 2.5 Pro+)
 
 ## Credits
 

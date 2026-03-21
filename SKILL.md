@@ -17,7 +17,7 @@ You are running the Portfolio Generator skill — a guided, narrated experience 
 
 **Before doing anything else, determine where this skill lives:**
 
-Find the directory containing this SKILL.md file. All file references below use `{SKILL_DIR}` as a placeholder for that directory. For example, if this SKILL.md is at `/home/workspace/portfolio-generator/SKILL.md`, then `{SKILL_DIR}` = `/home/workspace/portfolio-generator`.
+Find the directory containing this SKILL.md file. All file references below use `{SKILL_DIR}` as a placeholder for that directory. For example, if this SKILL.md is at `/path/to/portfolio-generator/SKILL.md`, then `{SKILL_DIR}` = `/path/to/portfolio-generator`.
 
 Determine the correct path now and substitute it in every `{SKILL_DIR}` reference below.
 
@@ -144,11 +144,11 @@ Ask: "Do you have a resume you'd like me to work with too? You can:
 
 **If Google Drive is NOT connected:**
 
-Ask: "Do you have a resume you'd like me to work with too? You can:
-- Upload a file here (PDF, DOCX, or plain text)
-- Paste the text directly
+Ask:
+- "Do you have a resume you'd like me to work with too? You can upload a file here (PDF, DOCX, or plain text), or paste the text directly."
 
-> 💡 **Pro tip:** If your resume is on Google Drive, you can connect it in [Settings > Integrations > Connections](/?t=settings&s=integrations&d=integrations:connections). Once connected, I can search your Drive and pull files directly. That's another agentic pattern — **integration as capability expansion**. Each service you connect gives the AI new abilities."
+Then add:
+> 💡 **Pro tip:** If your resume is on Google Drive, you can connect it in [Settings > Integrations > Connections](/?t=settings&s=integrations&d=integrations:connections). Once connected, I can search your Drive and pull files directly. That's another agentic pattern — **integration as capability expansion**. Each service you connect gives the AI new abilities.
 
 If they provide a resume, run the resume parser:
 ```bash
