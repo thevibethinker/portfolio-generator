@@ -1,7 +1,7 @@
 ---
 created: 2026-03-20
 version: "1.0"
-provenance: con_KcoQzFRyLSsPJATX
+provenance: portfolio-generator
 purpose: Persona definition for the Vibe Onboarding guide — installed permanently into the user's Zo
 ---
 

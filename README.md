@@ -1,81 +1,91 @@
----
-created: 2026-03-20
-version: "1.0"
-provenance: con_KcoQzFRyLSsPJATX
----
-
 # Portfolio Generator
 
 Build a professional portfolio website in 30 minutes using Zo — no coding required.
 
-This is a **Zo Skill** — a reusable tool that runs inside [Zo Computer](https://www.zo.computer). It walks you through the entire process of building a personal website, from gathering your professional data to deploying a live page at your own URL.
+A **[Zo Skill](https://agentskills.io)** that walks you through building a personal website from your LinkedIn data and professional history, then deploys it live to `your-handle.zo.space`. Every step is narrated so the process itself teaches you how agentic engineering works.
 
-## What You'll Get
+## What You Get
 
-- A polished, responsive personal portfolio website
+- A polished, responsive personal portfolio
 - Live at `https://your-handle.zo.space`
-- Built from your real LinkedIn data and professional history
-- Three design directions to choose from
+- Built from your real professional data (LinkedIn, resume, etc.)
+- Three design directions: **Editorial**, **Technical**, **Bold**
 
-## What You'll Learn
+## What You Learn
 
-Along the way, you'll experience core concepts of **agentic engineering** — working with AI to build real products:
+The skill narrates every step, teaching core **agentic engineering** concepts as you build:
 
-- **Context ingestion** — how AI gathers and structures information
-- **Human-in-the-loop** — keeping you in control of decisions
-- **Context-aware generation** — AI adapting output based on who you are
-- **Iterative refinement** — the rapid describe-build-review loop
-
-## Pre-Work
-
-Before the session, make sure you have:
-
-1. ✅ A Zo Computer account → [Sign up here](https://www.zo.computer)
-2. ✅ Your LinkedIn URL (e.g., `https://www.linkedin.com/in/yourname/`)
-3. 📎 Optional: Your resume (PDF, DOCX, or plain text)
-4. 📎 Optional: A professional headshot
-5. 📎 Optional: Any other content — bio, achievements, project descriptions
-
-## How to Run
-
-1. Copy this repository URL
-2. Paste it into your Zo chat
-3. Say: **"Run the portfolio generator skill"**
-4. Follow the guided steps — Zo will walk you through everything
-
-## What Happens
-
-| Step | Time | What You Do |
-|------|------|-------------|
-| Setup | ~3 min | Share the repo URL with Zo |
-| Data Gathering | ~5 min | Provide your LinkedIn URL + optional extras |
-| Profile Review | ~3 min | Confirm the data Zo extracted |
-| Design Direction | ~3 min | Choose your aesthetic |
-| Generation | ~5 min | Watch Zo build your site |
-| Polish | ~8 min | Request changes until you love it |
-| Wrap-Up | ~3 min | Get your live URL and next steps |
-
-## Example Output
-
-Your portfolio will include:
-- **Editorial-style hero** with large typography and a strong professional framing
-- **About section** with a rewritten, conversational professional bio
-- **Experience section** using clean divider-based entries (no generic cards)
-- **Domains/skills section** with clear signal, not progress bars or badge clutter
-- **Large CTA link** for outreach, plus a minimal footer
-
-Additional sections (projects, certifications, education, publications) appear automatically based on your profile.
+| Concept | What It Means |
+|---------|---------------|
+| **Context ingestion** | Giving AI structured information to work with |
+| **Human-in-the-loop** | You check the AI's work before it builds on it |
+| **Context-aware generation** | AI adapts output based on who you are |
+| **Iterative refinement** | The describe → build → review loop |
+| **Graceful degradation** | Fallbacks when a data source fails |
 
 ## Requirements
 
-- [Zo Computer](https://www.zo.computer) account
-- LinkedIn profile (public or logged into Zo's browser)
-- A strong model for best results (Claude Opus/Sonnet, GPT-4o+, Gemini 2.5 Pro+)
+- [Zo Computer](https://zo.computer) account
+- LinkedIn profile (public, or logged into Zo's browser)
+- A strong model for best results — Claude Opus/Sonnet, GPT-4o+, or Gemini 2.5 Pro+
+
+**Optional:** Resume (PDF, DOCX, or text) · Professional headshot · Bio, achievements, or project descriptions
+
+## Install & Run
+
+**From the Zo skills registry:**
+
+```bash
+slug="portfolio-generator"; dest_slug="portfolio-generator"; dest="Skills"; manifest_url="https://raw.githubusercontent.com/thevibethinker/zo-skills/main/manifest.json"; mkdir -p "$dest" && tarball_url="$(curl -fsSL "$manifest_url" | jq -r '.tarball_url')" && archive_root="$(curl -fsSL "$manifest_url" | jq -r '.archive_root')" && curl -L "$tarball_url" | tar -xz -C "$dest" --strip-components=1 --transform="s|^$archive_root/$slug|$dest_slug|" "$archive_root/$slug"
+```
+
+**Or clone directly:**
+
+```bash
+git clone https://github.com/thevibethinker/portfolio-generator.git Skills/portfolio-generator
+```
+
+Then say: **"Run the portfolio generator skill"**
+
+## How It Works
+
+| Step | ~Time | What Happens |
+|------|-------|--------------|
+| Data Gathering | 5 min | Share your LinkedIn URL + optional extras |
+| Profile Review | 3 min | Confirm the data Zo extracted |
+| Design Direction | 3 min | Choose your aesthetic |
+| Generation | 5 min | Watch Zo build and deploy your site |
+| Polish | 8 min | Iterate until you love it |
+| Wrap-Up | 3 min | Get your live URL and next steps |
+
+## Example Output
+
+Your portfolio includes:
+
+- **Editorial-style hero** — large typography, strong professional framing
+- **About section** — rewritten conversational bio
+- **Experience section** — clean divider-based entries (no generic cards)
+- **Skills/domains section** — clear signal, not progress bars or badge clutter
+- **CTA link** — large text with animated arrow, plus a minimal footer
+
+Additional sections (projects, certifications, education, publications) appear automatically based on your profile data.
+
+## Skill Contents
+
+```
+portfolio-generator/
+├── SKILL.md              # Main skill instructions
+├── persona.md            # Vibe Onboarding persona (auto-installed)
+├── scripts/
+│   ├── parse_resume.py   # Resume extraction (PDF, DOCX, TXT)
+│   └── validate_profile.py  # Profile data quality checks
+├── references/
+│   ├── design-guidelines.md  # Anti-slop design rules
+│   └── teaching-moments.md   # Narration scripts
+└── templates/
+    └── portfolio-modern.yaml  # Design system (3 directions)
+```
 
 ## Credits
 
-Built by [V. Attawar](https://vrijenattawar.com) for [The Vibe Pill](https://maven.com) on Maven.
-
----
-
-*This is a learning experience disguised as a tool. The portfolio is real — but the process of building it is the actual lesson.*
+Built by [V. Attawar](https://vrijenattawar.com) for [The Vibe Pill](https://thevibepill.com).

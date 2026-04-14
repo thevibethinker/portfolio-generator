@@ -2,7 +2,7 @@
 created: 2026-03-20
 last_edited: 2026-03-20
 version: "2.0"
-provenance: con_KcoQzFRyLSsPJATX
+provenance: portfolio-generator
 source: Adapted from Skills/frontend-design and Skills/landing-page-generator, refined via audit
 ---
 

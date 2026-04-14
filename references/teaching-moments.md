@@ -1,7 +1,7 @@
 ---
 created: 2026-03-20
 version: "1.0"
-provenance: con_KcoQzFRyLSsPJATX
+provenance: portfolio-generator
 purpose: Narration scripts for each step of the portfolio generator experience
 ---
 
